@@ -108,9 +108,9 @@ class BasePlugin:
 
     def onCommand(self,Unit,Command,Level,Color):
 
-            Domoticz.Debug("onCommand called for Unit {}: Command '{}', Level: {}".format(Unit,Command,Level))
+        Domoticz.Debug("onCommand called for Unit {}: Command '{}', Level: {}".format(Unit,Command,Level))
 
-            Devices[Unit].Update(nValue = nvalue,sValue = svalue)
+        Devices[Unit].Update(nValue = nvalue,sValue = svalue)
 
     def onHeartbeat(self):
 
