@@ -110,8 +110,6 @@ class BasePlugin:
 
         Domoticz.Debug("onCommand called for Unit {}: Command '{}', Level: {}".format(Unit,Command,Level))
 
-        Devices[Unit].Update(nValue = nvalue,sValue = svalue)
-
     def onHeartbeat(self):
 
         # fool proof checking.... based on users feedback
