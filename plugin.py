@@ -88,7 +88,7 @@ class BasePlugin:
             devicecreated.append(deviceparam(1,0,"0"))  # default is Off state
         if 2 not in Devices:
             Options = {"LevelActions":"||",
-                       "LevelNames":"Auto|Low|Mid|High",
+                       "LevelNames":"Off|Auto|Low|Mid|High",
                        "LevelOffHidden":"true",
                        "SelectorStyle":"0"}
             Domoticz.Device(Name = "Fan",Unit = 2,TypeName = "Selector Switch",Switchtype = 18,Image = 15,
