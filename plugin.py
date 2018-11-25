@@ -123,8 +123,6 @@ class BasePlugin:
         if Devices[1].sValue == "0":  # Aircon is off
             Domoticz.Debug("Aircon is Off !")
 
-        Devices[Unit].Update(nValue = nvalue,sValue = svalue)
-
     def WriteLog(self, message, level="Normal"):
 
         if self.loglevel == "Verbose" and level == "Verbose":
