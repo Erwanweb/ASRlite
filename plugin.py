@@ -85,14 +85,14 @@ class BasePlugin:
         # create the child devices if these do not exist yet
         devicecreated = []
         if 1 not in Devices:
-            Domoticz.Device(Name="ON/OFF", Unit=3, TypeName="Switch", Image=9, Used=1).Create()
+            Domoticz.Device(Name="ON/OFF", Unit=1, TypeName="Switch", Image=9, Used=1).Create()
             devicecreated.append(deviceparam(1, 0, ""))  # default is Off
         if 2 not in Devices:
             Options = {"LevelActions":"||",
                        "LevelNames":"Off|Auto|Cool|Heat|Dry|Fan",
                        "LevelOffHidden":"true",
                        "SelectorStyle":"0"}
-            Domoticz.Device(Name = "Mode",Unit = 1,TypeName = "Selector Switch",Switchtype = 18,Image = 15,
+            Domoticz.Device(Name = "Mode",Unit = 2,TypeName = "Selector Switch",Switchtype = 18,Image = 15,
                             Options = Options,Used = 1).Create()
             devicecreated.append(deviceparam(2,0,"30"))  # default is Heating mode
         if 3 not in Devices:
@@ -100,11 +100,11 @@ class BasePlugin:
                        "LevelNames":"Off|Auto|Low|Mid|High",
                        "LevelOffHidden":"true",
                        "SelectorStyle":"0"}
-            Domoticz.Device(Name = "Fan",Unit = 2,TypeName = "Selector Switch",Switchtype = 18,Image = 15,
+            Domoticz.Device(Name = "Fan",Unit = 3,TypeName = "Selector Switch",Switchtype = 18,Image = 15,
                             Options = Options,Used = 1).Create()
             devicecreated.append(deviceparam(3,0,"10"))  # default is Auto mode
         if 4 not in Devices:
-            Domoticz.Device(Name = "Setpoint",Unit = 3,Type = 242,Subtype = 1,Used = 1).Create()
+            Domoticz.Device(Name = "Setpoint",Unit = 4,Type = 242,Subtype = 1,Used = 1).Create()
             devicecreated.append(deviceparam(4,0,"21"))  # default is 21 degrees
 
         # if any device has been created in onStart(), now is time to update its defaults
