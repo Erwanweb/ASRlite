@@ -230,7 +230,7 @@ class BasePlugin:
     def buildCommandString(self):
         # Minimal string: pow=1&mode=1&stemp=26&shum=0&f_rate=B&f_dir=3
 
-        requestUrl = Parameters["Mode1"] + "/api_chunghopserver?action=changeconfig&remote=" + Parameters["Mode2"] +"&onoff="
+        requestUrl = "/api_chunghopserver?action=changeconfig&remote=" + Parameters["Mode2"] +"&onoff="
 
         if (self.powerOn):
             requestUrl = requestUrl + "ON"
