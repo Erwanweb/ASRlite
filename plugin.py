@@ -137,7 +137,7 @@ class BasePlugin:
         if Unit == 1:  # Aircon Mode
             if Command == 'Off':
                Domoticz.Log("Aircon is Off !")
-            else Command == 'Set Level':
+            elif Command == 'Set Level':
                 if Level == 10: # Aircon Mode is AUTO
                     Domoticz.Log("Aircon is in Auto Mode !")
                 if Level == 20: # Aircon Mode is COOL
