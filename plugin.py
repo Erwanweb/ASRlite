@@ -130,7 +130,7 @@ class BasePlugin:
                        'Connection':'keep-alive', \
                        'Accept':'Content-Type: text/html; charset=UTF-8', \
                        'Host':Parameters["Mode1"] + ":80", \
-                       'User-Agent':'Domoticz/1.0', \
+                       'User-Agent':'Domoticz/1.0'}
 
             if (Connection == self.httpConnControlInfo):
                 Domoticz.Debug("Control connection created")
