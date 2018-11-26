@@ -231,15 +231,6 @@ class BasePlugin:
         else:
             requestUrl = requestUrl + "0FF"
 
-        # Aircon Mode
-
-        requestUrl = requestUrl + "&mode="
-
-        if Devices[2].sValue == "10":
-            requestUrl = requestUrl + "AUTO"  # Cool
-            Domoticz.Log("Aircon id 1 mode setted AUTO")
-
-
         return requestUrl
 
 global _plugin
