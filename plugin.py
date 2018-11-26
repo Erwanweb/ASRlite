@@ -173,9 +173,9 @@ class BasePlugin:
                 "mac: " + mac + ";Index: " + index + ";Power: " + power + "; Mode: " + mode + "; FanSpeed: " + fanspeed + "; AC Set temp: " + stemp)
 
             if (power == "0F"):
-                self.power01 = "0"
+                self.power01 = 0
             else: 
-                self.power01 = "1"
+                self.power01 = 1
 
             self.powerOn = int(power01)
 
