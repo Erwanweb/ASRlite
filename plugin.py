@@ -172,7 +172,12 @@ class BasePlugin:
             Domoticz.Debug(
                 "mac: " + mac + ";Index: " + index + ";Power: " + power + "; Mode: " + mode + "; FanSpeed: " + fanspeed + "; AC Set temp: " + stemp)
 
-            self.powerOn = int(power)
+            if (power == "0F"):
+                self.power01 = "0"
+            else: 
+                self.power01 = "1"
+
+            self.powerOn = int(power01)
 
             # Power
             if (power == "0F"):
