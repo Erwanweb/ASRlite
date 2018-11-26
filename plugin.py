@@ -204,12 +204,12 @@ class BasePlugin:
 
         # Aircon Mode
 
-        if Devices[1].sValue == "0":
+        if Devices[1].nValue == "0":
             requestUrl = requestUrl + "&onoff=OFF"  # Off
             Domoticz.Log("Aircon id 1 mode setted OFF")
-        if Devices[1].sValue == "10":
-           requestUrl = requestUrl + "&onoff=ON&mode=COOL"  # Cool
-        Domoticz.Log("Aircon id 1 mode setted COOL")
+        if Devices[1].nValue == "10":
+            requestUrl = requestUrl + "&onoff=ON&mode=COOL"  # Cool
+            Domoticz.Log("Aircon id 1 mode setted COOL")
 
 
         return requestUrl
