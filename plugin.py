@@ -109,7 +109,7 @@ class BasePlugin:
             Devices[device.unit].Update(nValue = device.nvalue,sValue = device.svalue)
 
         self.httpConnControlInfo = Domoticz.Connection(Name = "Control Info",Transport = "TCP/IP",Protocol = "HTTP",
-                                                      Address = Parameters["Mode1"],Port = "/api_chunghopserver?status=full")
+                                                      Address = Parameters["Mode1"] + "/api_chunghopserver?status=full")
         self.httpConnControlInfo.Connect()
 
         self.httpConnSetControl = Domoticz.Connection(Name = "Set Control",Transport = "TCP/IP",Protocol = "HTTP",
