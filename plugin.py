@@ -140,7 +140,7 @@ class BasePlugin:
             elif (Connection == self.httpConnSetControl):
                 Domoticz.Debug("Set connection created")
                 requestUrl = self.buildCommandString()
-                Connection.Send({"Verb":"POST","URL":requestUrl,"Headers":headers})
+                Connection.Send({"Verb":"POST","URL":requestUrls})
         else:
             Domoticz.Debug("Connection failed")
 
