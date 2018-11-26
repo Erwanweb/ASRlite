@@ -136,11 +136,11 @@ class BasePlugin:
             if (Connection == self.httpConnControlInfo):
                 Domoticz.Debug("Control connection created")
                 requestUrl = "/api_chunghopserver?status=full"
+                Connection.Send({"Verb":"GET","URL":requestUrl,"Headers":headers})
             elif (Connection == self.httpConnSetControl):
                 Domoticz.Debug("Set connection created")
                 requestUrl = self.buildCommandString()
-
-            Connection.Send({"Verb":"GET","URL":requestUrl,"Headers":headers})
+                Connection.Send({"Verb":"POST","URL":requestUrl,"Headers":headers})
         else:
             Domoticz.Debug("Connection failed")
 
