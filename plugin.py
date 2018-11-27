@@ -187,9 +187,9 @@ class BasePlugin:
 
             # SR connexion
             if (connex == "1"):
-                Devices[1].Update(nValue = 0,sValue = 0)
+                Devices[1].Update(nValue = 0)
             else:
-                Devices[1].Update(nValue = 1,sValue = 1)
+                Devices[1].Update(nValue = 1)
 
             # Power
             if (onoff == "ON"):
