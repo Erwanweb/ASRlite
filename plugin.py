@@ -174,10 +174,8 @@ class BasePlugin:
 
             if (onoff == "ON"):
                 self.powerOn = 1
-                Devices[1].Update(nValue = 1,sValue = "100")
             else:
                 self.powerOn = 0
-                Devices[1].Update(nValue = 0,sValue = "0")
 
             # Mode
             if (mode == "AUT"):
