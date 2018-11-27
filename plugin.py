@@ -184,7 +184,12 @@ class BasePlugin:
                 "Power: " + onoff + "; Mode: " + mode + "; FanSpeed: " + fanspeed + "; AC Set temp: " + stemp)
 
             # Server SR index
-            self.index = int(id)
+            if (id == "1"):
+               self.index = 1
+            elif (id == "2"):
+               self.index = 2
+            elif (id == "3"):
+               self.index = 3
 
             # SR connexion
             if (connex == "0"):
