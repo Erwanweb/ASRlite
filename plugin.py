@@ -165,7 +165,7 @@ class BasePlugin:
 
         jsonStatus = json.loads(dataDecoded)
 
-        Domoticz.Debug("Received data from connection " + Connection.Name + ": " + jsonStatus)
+        # Domoticz.Debug("Received data from connection " + Connection.Name + ": " + jsonStatus)
 
         if (Connection == self.httpConnControlInfo):
 
